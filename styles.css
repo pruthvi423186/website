@@ -16,6 +16,7 @@
 body {
     background-color: var(--main-color);
     color: var(--text-dark);
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
 }
 
 /* Header Styles */
@@ -23,12 +24,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 15px 5%;
     background-color: var(--main-color);
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .header.sticky {
@@ -36,6 +38,7 @@ body {
     top: 0;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     animation: slideDown 0.3s ease-out;
+    padding: 10px 5%;
 }
 
 .logo {
@@ -114,7 +117,7 @@ body {
 
 .services-submenu.active {
     display: block;
-    max-height: 300px;
+    max-height: 500px; /* Increased to accommodate more menu items */
 }
 
 .services-submenu li {
@@ -145,32 +148,7 @@ body {
     cursor: pointer;
     color: var(--accent-color);
     padding: 5px 10px;
-}
-
-.nav-links.active {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--main-color);
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* Adjust services submenu for mobile */
-@media (max-width: 768px) {
-    .services-submenu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    .services-submenu.active {
-        max-height: 300px;
-    }
+    z-index: 1010;
 }
 
 /* CTA Button Style */
@@ -183,6 +161,7 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+    white-space: nowrap;
 }
 
 .cta-button:hover {
@@ -247,6 +226,7 @@ body {
     animation: fadeInUp 1s ease-out;
     position: relative;
     z-index: 1;
+    padding: 20px;
 }
 
 .hero-title {
@@ -298,6 +278,9 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    height: 100%; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card img {
@@ -319,7 +302,7 @@ body {
 .service-card h3 {
     font-size: 1.5rem;
     color: var(--accent-color);
-    margin: 20px;
+    margin: 20px 20px 10px;
 }
 
 .service-card p {
@@ -327,6 +310,7 @@ body {
     line-height: 1.6;
     margin: 0 20px 20px;
     color: #555;
+    flex-grow: 1; /* Allow text to expand */
 }
 
 .read-more {
@@ -349,7 +333,7 @@ body {
 
 /* Our Clients Section */
 .clients-section {
-    padding: 80px 5%;
+    padding: 80px 5% 40px;
     background-color: var(--main-color);
     overflow: hidden;
 }
@@ -357,6 +341,7 @@ body {
 .clients-slider {
     width: 100%;
     overflow: hidden;
+    margin-top: 40px;
 }
 
 .clients-track {
@@ -389,17 +374,6 @@ body {
 /* Pause animation on hover */
 .clients-track:hover {
     animation-play-state: paused;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .client-item {
-        margin: 0 10px;
-    }
-
-    .client-item img {
-        max-height: 80px;
-    }
 }
 
 /* About Section with Proprietor */
@@ -477,12 +451,13 @@ body {
 }
 
 .proprietor-img {
-    width: 60px;     /* Changed from 120px to 60px */
-    height: 60px;    /* Changed from 120px to 60px */
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
     border: 3px solid var(--accent-color);
+    flex-shrink: 0;
 }
 
 .proprietor-img img {
@@ -521,6 +496,7 @@ body {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    height: 100%;
 }
 
 .benefit-item:hover {
@@ -571,11 +547,11 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    width: 100%;
 }
 
 /* Dropdown Select Field Styles */
 .contact-form select {
-    width: 100%;
     background-color: white;
     color: #555;
     cursor: pointer;
@@ -598,7 +574,7 @@ body {
 
 /* Style for the option items */
 .contact-form select option {
-    padding: 10px;
+    padding::10px;
     background-color: white;
     color: #555;
 }
@@ -610,7 +586,8 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    font-weight: bold;cursor: pointer;
+    font-weight: bold;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -650,6 +627,26 @@ body {
 
 .footer-section a:hover {
     color: var(--accent-color);
+}
+
+.brochure-section {
+    margin-top: 20px;
+}
+
+.download-brochure-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.download-brochure-btn:hover {
+    background-color: #c0392b;
+    color: white;
 }
 
 .footer-bottom {
@@ -733,77 +730,6 @@ body {
     to { transform: translateY(0); }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-   
-    .nav-links {
-        display: none;
-    }
-   
-    .mobile-menu-btn.open {
-        color: #fff;
-        background: var(--accent-color);
-        border-radius: 5px;
-    }
-
-    .header {
-        flex-direction: column;
-        padding: 10px 5%;
-    }
-   
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-   
-    .hero-title {
-        font-size: 2.5rem;
-    }
-   
-    .hero-tag {
-        font-size: 1.2rem;
-    }
-   
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card img {
-        height: 150px;
-    }
-   
-    .about-container {
-        flex-direction: column;
-    }
-   
-    .proprietor-info {
-        flex-direction: column;
-        text-align: center;
-    }
-   
-    .proprietor-img {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
-   
-    /* Adjust hero slider rounded corners for mobile */
-    .slide {
-        border-radius: 10px;
-    }
-   
-    .slide:before {
-        border-radius: 10px;
-    }
-}
-
 /* Form Success and Error Message Styles */
 .form-success-message,
 .form-error-message {
@@ -867,6 +793,8 @@ body {
     max-width: 800px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     animation: modalFadeIn 0.4s;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 @keyframes modalFadeIn {
@@ -883,6 +811,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
+    z-index: 1;
 }
 
 .close-modal:hover {
@@ -932,8 +861,156 @@ body {
     line-height: 1.5;
 }
 
-/* Mobile Responsive Modal */
+/* Improved Mobile Responsiveness */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header {
+        padding: 15px 4%;
+    }
+    
+    .about-container {
+        gap: 30px;
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Add space for fixed header */
+    }
+    
+    .header {
+        padding: 10px 4%;
+        position: fixed;
+        top: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        width: 100%;
+        padding: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        margin-left: auto;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Services submenu styles for mobile */
+    .services-submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+        max-height: none;
+        background-color: rgba(0,0,0,0.03);
+    }
+    
+    .services-submenu.active {
+        display: block;
+    }
+    
+    .services-submenu a {
+        padding-left: 40px;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+        height: calc(100vh - 70px);
+        margin-top: 70px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-tag {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+    
+    /* Services section */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card img {
+        height: 180px;
+    }
+    
+    /* About section */
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-img, .about-content {
+        width: 100%;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Benefits section */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+    
+    /* Service modal */
     .modal-content {
         width: 95%;
         margin: 10% auto;
@@ -952,5 +1029,68 @@ body {
         top: 10px;
         right: 15px;
         font-size: 28px;
+    }
+    
+    /* Client section */
+    .clients-track {
+        animation-duration: 15s;
+    }
+    
+    .client-item img {
+        max-height: 60px;
+    }
+    
+    /* WhatsApp float button */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .service-detail-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info h3, .contact-form h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Proprietor info */
+    .proprietor-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .proprietor-img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .proprietor-details h3 {
+        font-size: 1.3rem;
     }
 }
