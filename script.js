@@ -381,6 +381,121 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>
                 </div>
             `
+        },
+        'rcc-flooring': {
+            title: 'RCC Flooring',
+            mainImage: 'images/rcfjs.png',
+            description: `
+                <div class="service-detail-section">
+                    <h3>What is RCC Flooring?</h3>
+                    <p>Reinforced Cement Concrete (RCC) flooring is a high-strength flooring solution that combines concrete with steel reinforcement to create exceptionally durable surfaces. The steel reinforcement, typically in the form of rebar or mesh, significantly enhances the concrete's tensile strength and load-bearing capacity.</p>
+                    <p>RCC flooring provides superior structural integrity and longevity, making it ideal for areas subject to heavy loads, high traffic, or demanding industrial environments.</p>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>The RCC Flooring Process</h3>
+                    <p>Our professional RCC flooring installation includes:</p>
+                    <ul>
+                        <li><strong>Site Preparation:</strong> Excavation, leveling, and compaction of the base.</li>
+                        <li><strong>Formwork:</strong> Creating boundaries and establishing the final floor level.</li>
+                        <li><strong>Reinforcement Placement:</strong> Installing steel rebar or mesh in a calculated pattern.</li>
+                        <li><strong>Concrete Pouring:</strong> Using high-grade concrete mix with appropriate strength class.</li>
+                        <li><strong>Compaction and Leveling:</strong> Ensuring proper concrete distribution and removing air pockets.</li>
+                        <li><strong>Finishing:</strong> Power troweling for smooth finish or specialized texturing if required.</li>
+                        <li><strong>Curing:</strong> Proper moisture maintenance for optimal strength development.</li>
+                        <li><strong>Joint Cutting:</strong> Creating controlled expansion and contraction joints as needed.</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>Benefits of RCC Flooring</h3>
+                    <ul>
+                        <li>Exceptional structural strength and load-bearing capacity</li>
+                        <li>Superior durability and extended service life</li>
+                        <li>Resistance to cracking, bending, and deformation</li>
+                        <li>Excellent performance under dynamic and static loads</li>
+                        <li>Reduced maintenance requirements</li>
+                        <li>Fire resistance and safety</li>
+                        <li>Sound insulation properties</li>
+                        <li>Cost-effective long-term solution</li>
+                        <li>Versatility for various applications</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>Applications</h3>
+                    <p>RCC flooring is ideal for:</p>
+                    <ul>
+                        <li>Heavy industrial facilities</li>
+                        <li>Manufacturing plants</li>
+                        <li>Warehouses with heavy machinery</li>
+                        <li>Loading docks and shipping areas</li>
+                        <li>Multi-story commercial buildings</li>
+                        <li>Data centers</li>
+                        <li>Cold storage facilities</li>
+                        <li>High-rise residential structures</li>
+                        <li>Institutional buildings</li>
+                    </ul>
+                </div>
+            `
+        },
+        'industrial-flooring': {
+            title: 'Industrial Flooring',
+            mainImage: 'images/industrialflooring.jpg',
+            description: `
+                <div class="service-detail-section">
+                    <h3>Industrial Flooring Solutions</h3>
+                    <p>Our industrial flooring solutions are engineered to meet the demanding requirements of manufacturing facilities, warehouses, and production environments. We provide specialized flooring systems that deliver exceptional performance under heavy machinery, chemical exposure, and continuous use.</p>
+                    <p>With our extensive experience in industrial applications, we offer customized flooring solutions that combine durability, safety, and functionality for your specific operational needs.</p>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>Our Industrial Flooring Systems</h3>
+                    <p>We offer a comprehensive range of industrial flooring solutions:</p>
+                    <ul>
+                        <li><strong>Heavy-Duty Concrete Floors:</strong> Reinforced high-strength concrete systems.</li>
+                        <li><strong>Chemical-Resistant Epoxy Systems:</strong> Protection against acids, alkalis, solvents, and other chemicals.</li>
+                        <li><strong>Anti-Static/ESD Flooring:</strong> For electronics manufacturing and sensitive equipment areas.</li>
+                        <li><strong>Impact-Resistant Surfaces:</strong> Designed to withstand heavy drops and equipment movement.</li>
+                        <li><strong>Thermal-Resistant Flooring:</strong> For high-temperature environments.</li>
+                        <li><strong>Non-Slip Safety Surfaces:</strong> Enhanced traction in wet or oily conditions.</li>
+                        <li><strong>Hygienic Antimicrobial Floors:</strong> For food processing and pharmaceutical facilities.</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>Benefits of Our Industrial Flooring</h3>
+                    <ul>
+                        <li>Exceptional durability under extreme conditions</li>
+                        <li>Resistance to chemicals, oils, and industrial fluids</li>
+                        <li>High compressive and tensile strength</li>
+                        <li>Abrasion and impact resistance</li>
+                        <li>Easy maintenance and cleaning</li>
+                        <li>Customizable slip resistance for safety</li>
+                        <li>Temperature and thermal shock resistance</li>
+                        <li>Seamless installation options</li>
+                        <li>Dust-free surfaces for sensitive environments</li>
+                        <li>Compliance with industry standards and regulations</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-section">
+                    <h3>Industries We Serve</h3>
+                    <p>Our industrial flooring solutions are ideal for:</p>
+                    <ul>
+                        <li>Manufacturing facilities</li>
+                        <li>Automotive and aerospace industries</li>
+                        <li>Food and beverage processing</li>
+                        <li>Pharmaceutical and healthcare</li>
+                        <li>Chemical processing plants</li>
+                        <li>Electronics manufacturing</li>
+                        <li>Warehousing and distribution centers</li>
+                        <li>Power plants and utilities</li>
+                        <li>Military and defense facilities</li>
+                        <li>Transportation and logistics hubs</li>
+                    </ul>
+                </div>
+            `
         }
     };
     
