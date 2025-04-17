@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'rcc-flooring': {
             title: 'RCC Flooring',
-            mainImage: 'images/rcfjs.png',
+            mainImage: 'images/rcfjs.jpg',
             description: `
                 <div class="service-detail-section">
                     <h3>What is RCC Flooring?</h3>
